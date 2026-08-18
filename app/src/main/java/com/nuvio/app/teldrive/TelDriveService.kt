@@ -111,10 +111,12 @@ class TelDriveService : Service() {
         )
 
         return NotificationCompat.Builder(this, CHANNEL_ID)
-            .setContentTitle("Nuvio Cloud Engine")
-            .setContentText("TelDrive local gateway is running...")
-            .setSmallIcon(android.R.drawable.stat_sys_download)
+            .setContentTitle("Teldrive Running")
+            .setContentText("Teldrive local gateway is running...")
+            .setSmallIcon(R.drawable.ic_cloud)
             .setContentIntent(pendingIntent)
+            .setOngoing(true)
+            .setOnlyAlertOnce(true)
             .build()
     }
 
